@@ -94,9 +94,21 @@ namespace FindLetters
             return russianAlphabet[index];
         }
 
+        private char GetRandomEnglishLetter()
+        {
+            // Генерация случайной буквы английского алфавита
+            const string englishAlphabet = "qwertyuiopasdfghjklzxcvbnm";
+            int index = random.Next(englishAlphabet.Length);
+            return englishAlphabet[index];
+        }
+
         private void ShowNextLetter()
         {
-            char randomLetter = GetRandomRussianLetter();
+            char randomLetter = ' ';
+
+            if (radioButton_russian.Checked) { randomLetter = GetRandomRussianLetter(); }
+            else if (radioButton_english.Checked) { randomLetter = GetRandomEnglishLetter(); }
+
             label_letter.Text = randomLetter.ToString().ToUpper();
             if (radioButton1.Checked) { letter_timer.Start(); }
         }

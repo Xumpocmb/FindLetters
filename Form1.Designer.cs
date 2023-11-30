@@ -55,10 +55,14 @@
             играToolStripMenuItem = new ToolStripMenuItem();
             выходToolStripMenuItem = new ToolStripMenuItem();
             оПрограммеToolStripMenuItem = new ToolStripMenuItem();
+            groupBox3 = new GroupBox();
+            radioButton_english = new RadioButton();
+            radioButton_russian = new RadioButton();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             menuStrip1.SuspendLayout();
+            groupBox3.SuspendLayout();
             SuspendLayout();
             // 
             // label_game_name
@@ -107,7 +111,7 @@
             // 
             // button_start
             // 
-            button_start.Anchor = AnchorStyles.Top;
+            button_start.Anchor = AnchorStyles.Bottom;
             button_start.Font = new Font("Segoe UI", 26F, FontStyle.Bold, GraphicsUnit.Point);
             button_start.Location = new Point(164, 345);
             button_start.Name = "button_start";
@@ -119,7 +123,7 @@
             // 
             // label_timer
             // 
-            label_timer.Anchor = AnchorStyles.Top;
+            label_timer.Anchor = AnchorStyles.Bottom;
             label_timer.AutoSize = true;
             label_timer.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label_timer.Location = new Point(164, 313);
@@ -130,7 +134,7 @@
             // 
             // textBox_timer
             // 
-            textBox_timer.Anchor = AnchorStyles.Top;
+            textBox_timer.Anchor = AnchorStyles.Bottom;
             textBox_timer.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox_timer.Location = new Point(305, 310);
             textBox_timer.MaxLength = 3;
@@ -151,7 +155,7 @@
             // 
             // progressBar1
             // 
-            progressBar1.Dock = DockStyle.Bottom;
+            progressBar1.Anchor = AnchorStyles.Bottom;
             progressBar1.Location = new Point(0, 477);
             progressBar1.Name = "progressBar1";
             progressBar1.Size = new Size(594, 23);
@@ -160,7 +164,7 @@
             // 
             // label_remaining
             // 
-            label_remaining.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label_remaining.Anchor = AnchorStyles.Bottom;
             label_remaining.AutoSize = true;
             label_remaining.BackColor = Color.Transparent;
             label_remaining.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -173,11 +177,11 @@
             // 
             // groupBox1
             // 
-            groupBox1.Anchor = AnchorStyles.Top;
+            groupBox1.Anchor = AnchorStyles.Bottom;
             groupBox1.Controls.Add(radioButton1);
             groupBox1.Controls.Add(radioButton2);
             groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox1.Location = new Point(164, 189);
+            groupBox1.Location = new Point(94, 189);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(149, 80);
             groupBox1.TabIndex = 11;
@@ -186,7 +190,7 @@
             // 
             // label_score
             // 
-            label_score.Anchor = AnchorStyles.Top;
+            label_score.Anchor = AnchorStyles.Bottom;
             label_score.AutoSize = true;
             label_score.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             label_score.Location = new Point(164, 403);
@@ -197,7 +201,7 @@
             // 
             // label_user_score
             // 
-            label_user_score.Anchor = AnchorStyles.Top;
+            label_user_score.Anchor = AnchorStyles.Bottom;
             label_user_score.AutoSize = true;
             label_user_score.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             label_user_score.Location = new Point(421, 403);
@@ -220,12 +224,12 @@
             // 
             // groupBox2
             // 
-            groupBox2.Anchor = AnchorStyles.Top;
+            groupBox2.Anchor = AnchorStyles.Bottom;
             groupBox2.Controls.Add(radioButton_hard);
             groupBox2.Controls.Add(radioButton_normal);
             groupBox2.Controls.Add(radioButton_easy);
             groupBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox2.Location = new Point(318, 189);
+            groupBox2.Location = new Point(249, 189);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(126, 105);
             groupBox2.TabIndex = 15;
@@ -273,6 +277,7 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox1.Image = Properties.Resources.logo;
             pictureBox1.Location = new Point(475, 24);
             pictureBox1.Name = "pictureBox1";
@@ -311,11 +316,47 @@
             оПрограммеToolStripMenuItem.Text = "О программе";
             оПрограммеToolStripMenuItem.Click += оПрограммеToolStripMenuItem_Click;
             // 
+            // groupBox3
+            // 
+            groupBox3.Anchor = AnchorStyles.Bottom;
+            groupBox3.Controls.Add(radioButton_english);
+            groupBox3.Controls.Add(radioButton_russian);
+            groupBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            groupBox3.Location = new Point(380, 189);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(200, 100);
+            groupBox3.TabIndex = 18;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Алфавит";
+            // 
+            // radioButton_english
+            // 
+            radioButton_english.AutoSize = true;
+            radioButton_english.Location = new Point(16, 47);
+            radioButton_english.Name = "radioButton_english";
+            radioButton_english.Size = new Size(112, 25);
+            radioButton_english.TabIndex = 1;
+            radioButton_english.Text = "Английский";
+            radioButton_english.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_russian
+            // 
+            radioButton_russian.AutoSize = true;
+            radioButton_russian.Checked = true;
+            radioButton_russian.Location = new Point(16, 22);
+            radioButton_russian.Name = "radioButton_russian";
+            radioButton_russian.Size = new Size(85, 25);
+            radioButton_russian.TabIndex = 0;
+            radioButton_russian.TabStop = true;
+            radioButton_russian.Text = "Русский";
+            radioButton_russian.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(594, 500);
+            Controls.Add(groupBox3);
             Controls.Add(pictureBox1);
             Controls.Add(groupBox2);
             Controls.Add(button_stop);
@@ -344,6 +385,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -375,5 +418,8 @@
         private ToolStripMenuItem играToolStripMenuItem;
         private ToolStripMenuItem выходToolStripMenuItem;
         private ToolStripMenuItem оПрограммеToolStripMenuItem;
+        private GroupBox groupBox3;
+        private RadioButton radioButton_english;
+        private RadioButton radioButton_russian;
     }
 }
