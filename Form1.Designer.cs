@@ -137,12 +137,13 @@
             textBox_timer.Anchor = AnchorStyles.Bottom;
             textBox_timer.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox_timer.Location = new Point(305, 310);
-            textBox_timer.MaxLength = 3;
+            textBox_timer.MaxLength = 1;
             textBox_timer.Name = "textBox_timer";
             textBox_timer.PlaceholderText = "Время в секундах";
             textBox_timer.Size = new Size(139, 29);
             textBox_timer.TabIndex = 6;
             textBox_timer.Text = "2";
+            textBox_timer.KeyPress += textBox_timer_KeyPress;
             // 
             // game_timer
             // 

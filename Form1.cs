@@ -179,5 +179,27 @@ namespace FindLetters
             Form2 newForm = new Form2();
             newForm.ShowDialog();
         }
+
+        private void textBox_timer_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (sender is TextBox)
+            {
+                var c = Convert.ToChar(Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator);
+
+                if (c == e.KeyChar)
+                {
+                    if ((sender as TextBox).Text.Contains(c))
+                    {
+                        e.Handled = true;
+                    }
+                }
+
+                else if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+                {
+                    e.Handled = true;
+                }
+            }
+            else e.Handled = true;
+        }
     }
 }
